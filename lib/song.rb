@@ -8,8 +8,6 @@ class Song
     @@artists = []
     @@songs = []
     @@count = 0
-    
-    @@artist_song_hash = {}
    
    def initialize(name, artist, genre)
      @name = name 
@@ -19,12 +17,7 @@ class Song
     @@artists.push(artist)
     @@genres.push(genre)
     @@songs.push(name)
-    
-    if @@artist_song_hash.keys.include?(artist)
-     @@artist_song_hash[artist].push(name)
-    else 
-      @@artist_song_hash.merge!({artist => [name]})
-    end 
+
     @@count += 1 
   end 
   
