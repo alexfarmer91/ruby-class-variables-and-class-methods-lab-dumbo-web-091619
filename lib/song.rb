@@ -50,7 +50,7 @@ class Song
     
     def self.artist_count
       @@artist_song_hash.map { |artist_name, songs_by_artist|
-         {artist_name => songs_by_artist.length}
+         {artist_name => songs_by_artist.uniq.length}
       }
     end 
     
