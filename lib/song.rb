@@ -41,9 +41,7 @@ end
   end 
   
   def self.artist_count
-    @@artist_song_hash.each { |artist_name_key, song_list|
-      @@artist_song_hash[artist_name_key]
-    }
+  
   end 
   
 end 
