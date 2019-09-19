@@ -48,11 +48,9 @@ class Song
       genre_hash
     end 
     
-    def self.artist_count
-      @@artist_song_hash.map { |artist_name, songs_by_artist|
-         {artist_name => songs_by_artist.uniq.length}.flatten
-      }
-    end 
+  def self.artist_count
+    @@artists.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
+  end
     
     def self.count 
       @@count
