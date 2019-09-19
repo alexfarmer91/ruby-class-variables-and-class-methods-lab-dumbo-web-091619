@@ -41,7 +41,9 @@ end
   end 
   
   def self.artist_count
-  
+    @@artist_song_hash.map { |artist_name, songs_by_artist|
+       {artist_name => songs_by_artist.length}
+    }
   end 
   
 end 
