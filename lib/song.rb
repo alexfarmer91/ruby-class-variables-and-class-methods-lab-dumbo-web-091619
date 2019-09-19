@@ -37,7 +37,9 @@ end
   end 
   
   def self.genre_count
-    
+    @@all_genres.uniq.each { |key|
+      {key => @@all_genres.count(key)}
+    }
   end 
   
   def self.artist_count
